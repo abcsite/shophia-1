@@ -125,22 +125,22 @@
   align-items: flex-start;
 }
 .nav-bottom__social-link{
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   margin: 5px;
   border-radius: 50%;
   background: $color-white;
 }
 .nav-bottom__social-img {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   fill: $color-black;
   transition: all 0.2s;
 }
 .nav-bottom__social-link:hover .nav-bottom__social-img{
-  width: 30px;
-  height: 30px;
-  transform: scale(1.4);
+  width: 35px;
+  height: 35px;
+  //transform: scale(1.1);
 }
 
 

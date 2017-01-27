@@ -49,7 +49,7 @@ const cms = {
         html: 'build',
         css: 'build/assets/css',
         js: 'build/assets/js',
-        img: 'build/assets/',
+        img: 'build/assets',
         libs: 'build/assets/libs',
         fonts: 'build/assets/fonts',
     }
@@ -155,7 +155,7 @@ gulp.task('fonts', () => {
 gulp.task('img', () => {
     return gulp.src(['src/img/**/*.{jpg,png,gif}', 'src/images/**/*.{jpg,png,gif}'], {base: "src"})
         .pipe(newer(cms.modx.img))
-        .pipe(gulpIf(!isDevelopment, imagemin({progressive: true})))
+        // .pipe(gulpIf(!isDevelopment, imagemin({progressive: true})))
         // .pipe(gulpIf(!isDevelopment, smushit({verbose: true})))
         .pipe(gulpIf(isDevelopment, gulp.symlink(cms.modx.img), gulp.dest(cms.modx.img)))
 });
