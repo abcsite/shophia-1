@@ -1,0 +1,14 @@
+{
+  "name": "my-project",
+  "dependencies": {
+    "jquery": "^3.1.0",
+    "normalize-css": "^4.2.0",
+    "slick-carousel": "^1.6.0",
+    "svg4everybody": "^2.1.0"
+  },
+  "overrides": {
+    "jquery": {
+      "main": "dist/jquery.min.js"
+    }
+  }
+}

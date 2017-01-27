@@ -1,0 +1,61 @@
+// This file defines the common properties for all the blocks (files)
+
+html {
+  //font-family: krinkes, sans-serif;
+  //font-style: italic;
+  font-size: $font-size0;
+}
+
+
+body *{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+}
+body > script{
+  display: none;
+}
+//body{
+//  display: flex;
+//  flex-direction: column ;
+//  //justify-content: center;
+//  //align-items: stretch;
+//}
+body > *{
+  margin: 0 auto;
+  //border: 3px solid black;
+}
+main{
+  max-width: $wrap-wide-width;
+  flex-direction: column ;
+  //justify-content: center;
+  //align-items: stretch;
+}
+
+ul {
+  list-style: none;
+}
+a{
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  user-select: none;
+}
+
+.title-block {
+  @include block-title($font-size-title);
+
+  @media screen and (max-width: $screen-width1) {
+    @include block-title(3vw);
+  }
+  @media screen and (max-width: $screen-width2) {
+    @include block-title(3.5vw);
+  }
+  @media screen and (max-width: $screen-width3) {
+    @include block-title(5vw);
+  }
+}
+
+

@@ -1,0 +1,228 @@
+@mixin flex-parent($row, $nowrap, $space-between, $center, $flex-start) {
+  display: flex; // flex | inline-flex
+  flex-direction: $row; // row | row-reverse | column | column-reverse
+  flex-wrap: $nowrap; // nowrap | wrap | wrap-reverse
+  justify-content: $space-between; // flex-start | flex-end | center | space-between | space-around
+  align-items: $center; // flex-start | flex-end | center | baseline | stretch
+  align-content: $flex-start; // flex-start | flex-end | center | space-between | space-around | stretch
+}
+
+// @include flex-parent(row, nowrap, space-between, center, flex-start);
+
+@mixin flex-child($basis, $grow, $shrink, $self, $order) {
+  flex-basis: $basis; // 100px | auto
+  flex-grow: $grow; // 0
+  flex-shrink: $shrink; // 1
+  align-self: $self; //auto | flex-start | flex-end | center | baseline | stretch
+  order: $order; // 0 | 1 | 2
+}
+
+// @include flex-child(auto, 0, 1, auto, 0);
+
+
+@mixin title-line($width) {
+  &:before{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: $width;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    //z-index: 2;
+    background: $color-gray3;
+  }
+}
+
+
+
+
+
+
+@mixin array-before-in($numb, $height, $width, $color) {
+  &:nth-child(#{$numb}):before {
+    content: '';
+    display: block;
+    position: absolute;
+    border: ($height / 2) solid $color;
+    border-right: 0em solid $color;
+    border-left: $width solid transparent;
+    right: 100%;
+    top: 0px;
+    bottom: 0px;
+  }
+}
+
+@mixin array-before-out($numb, $height, $width, $color) {
+  &:nth-child(#{$numb}):before {
+    content: '';
+    display: block;
+    position: absolute;
+    border: ($height / 2) solid transparent;
+    border-left: 0em solid transparent;
+    border-right: $width solid $color;
+    right: 100%;
+    top: 0px;
+    bottom: 0px;
+  }
+}
+
+@mixin array-after-out($numb, $height, $width, $color) {
+  &:nth-child(#{$numb}):after {
+    content: '';
+    display: block;
+    position: absolute;
+    border: ($height / 2) solid transparent;
+    border-right: 0em solid transparent;
+    border-left: $width solid $color;
+    left: 100%;
+    top: 0px;
+    bottom: 0px;
+  }
+}
+
+@mixin array-after-in($numb, $height, $width, $color) {
+  &:nth-child(#{$numb}):after {
+    content: '';
+    display: block;
+    position: absolute;
+    border: ($height / 2) solid $color;
+    border-left: 0em solid $color;
+    border-right: $width solid transparent;
+    left: 100%;
+    top: 0px;
+    bottom: 0px;
+  }
+}
+
+
+
+
+@mixin menu_anim($n, $height, $time, $delay) {
+  @for $i from 1 through ($n - 1) {
+    &:nth-child(#{$i + 1}) {
+      top: ($i * $height);
+      transition: all $time (($i - 1) * $delay);
+    }
+  }
+}
+@mixin menu_anim_revers($n, $height, $time, $delay) {
+  @for $i from 1 through ($n - 1) {
+    &:nth-child(#{$i + 1}) {
+      top: ($i * $height);
+      transition: all $time (($n - $i - 1) * $delay);
+    }
+  }
+}
+
+@mixin menu-text-anim($time, $color, $height, $offset) {
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    border-top: $height solid $color;
+    height: 0px;
+    bottom: $offset;
+    width: 0%;
+    left: 50%;
+    transition: all $time;
+  }
+  &:hover:before {
+    width: 100%;
+    left: 0%;
+  }
+}
+
+@mixin menu-text-anim-parent($time, $color, $height, $offset) {
+  & a {
+    position: relative;
+  }
+  & a:before {
+    content: '';
+    position: absolute;
+    border-top: $height solid $color;
+    height: 0px;
+    bottom: $offset;
+    width: 0%;
+    left: 50%;
+    transition: all $time;
+  }
+  &:hover > a:before {
+    width: 100%;
+    left: 0%;
+  }
+}
+
+
+
+
+@mixin button-shop-anim($degree, $hieght, $color-new,  $time) {
+  overflow: hidden;
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 0%;
+    left: 50%;
+    top: 50%;
+    width: 150%;
+    transform: translate(-50%, -50%) rotate($degree);
+    transform-origin: 50% 50%;
+    z-index: -1;
+    background: $color-new;
+    transition: all $time ease 0s;
+  }
+  &:hover:after {
+    height: $hieght;
+  }
+}
+
+@mixin block-title($font-size) {
+  & {
+    display: inline-block;
+    position: relative;
+    //top: $offset-top;
+    transform: translateY(-50%);
+    padding: 0px 14%;
+    background: $color-white;
+  }
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0.5 * $font-size;
+    height: 0.5 * $font-size;
+    left: 8%;
+    top: 40%;
+    transform: translateY(-50%);
+    transform: rotate(45deg);
+    background: $color-orange1;
+  }
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0.5 * $font-size;
+    height: 0.5 * $font-size;
+    right: 8%;
+    top: 40%;
+    transform: translateY(-50%);
+    transform: rotate(45deg);
+    background: $color-orange1;
+  }
+  & h2 {
+    font-family: 'PlayfairDisplayItalic';
+    font-style: normal;
+    font-weight: bolder;
+    font-size: $font-size;
+    letter-spacing: 0.1em;
+    //transform: scaleX(1.1);
+  }
+}
+
+
+@mixin width-column($amount-col, $offsets) {
+    margin: (($offsets) / 2);
+    width: calc((100% -  (#{$offsets}) * (#{$amount-col}) ) / (#{$amount-col}));
+}
+

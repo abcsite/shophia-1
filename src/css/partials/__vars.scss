@@ -1,0 +1,121 @@
+// COLORS
+$color-black: #000;
+$color-white: #fff;
+$color-orange1: #d9bf8f;
+$color-orange2: #feab12;
+$color-red: #f0975c;
+$color-gray1: #323030;
+$color-gray2: #7f7e7e;
+$color-gray3: #f2f2f2;
+
+// HEADER ANIMATION
+$header_time: 0.3s;
+$top-line-height: 40px;
+
+// BUTTONS ANIMATION
+$butt-degree: 15deg;
+$butt-hieght: 200%;
+$butt-color: #ff277c;
+$butt-time: 0.2s;
+
+
+
+//  SIZES
+$wrap-width: 1280px;
+$wrap-wide-width: 1440px;
+
+
+//  SCREEN WIDTH
+$screen-width1: 0.85 * $wrap-width;
+$screen-width2: 0.7 * $wrap-width;
+$screen-width3: 0.5 * $wrap-width;
+$screen-width4: 0.3 * $wrap-width;
+
+//TITLES OF BLOCKS
+$offset-top: -19px;
+
+
+
+// FONTS
+$font-size0: 17px;
+//$font-size1: 0.63rem;
+$font-size-title: 1.7 * $font-size0;
+
+
+
+@font-face {
+  font-family: 'KrinkesDecorPERSONAL';
+  src: url('../fonts/krinkes-personal/KrinkesDecorPERSONAL.eot');
+  src: url('../fonts/krinkes-personal/KrinkesDecorPERSONAL.eot') format('embedded-opentype'),
+  url('../fonts/krinkes-personal/KrinkesDecorPERSONAL.woff2') format('woff2'),
+  url('../fonts/krinkes-personal/KrinkesDecorPERSONAL.woff') format('woff'),
+  url('../fonts/krinkes-personal/KrinkesDecorPERSONAL.ttf') format('truetype'),
+  url('../fonts/krinkes-personal/KrinkesDecorPERSONAL.svg#KrinkesDecorPERSONAL') format('svg');
+}
+@font-face {
+  font-family: 'LatoRegular';
+  src: url('../fonts/lato/LatoRegular.eot');
+  src: url('../fonts/lato/LatoRegular.eot') format('embedded-opentype'),
+  url('../fonts/lato/LatoRegular.woff') format('woff'),
+  url('../fonts/lato/LatoRegular.ttf') format('truetype'),
+  url('../fonts/lato/LatoRegular.svg#LatoRegular') format('svg');
+}
+@font-face {
+  font-family: 'LatoBold';
+  src: url('../fonts/lato//LatoBold.eot');
+  src: url('../fonts/lato//LatoBold.eot') format('embedded-opentype'),
+  url('../fonts/lato//LatoBold.woff2') format('woff2'),
+  url('../fonts/lato//LatoBold.woff') format('woff'),
+  url('../fonts/lato//LatoBold.ttf') format('truetype'),
+  url('../fonts/lato//LatoBold.svg#LatoBold') format('svg');
+}
+@font-face {
+  font-family: 'PlayfairDisplayItalic';
+  src: url('../fonts/playfair_display/PlayfairDisplayItalic.eot');
+  src: url('../fonts/playfair_display/PlayfairDisplayItalic.eot') format('embedded-opentype'),
+  url('../fonts/playfair_display/PlayfairDisplayItalic.woff2') format('woff2'),
+  url('../fonts/playfair_display/PlayfairDisplayItalic.woff') format('woff'),
+  url('../fonts/playfair_display/PlayfairDisplayItalic.ttf') format('truetype'),
+  url('../fonts/playfair_display/PlayfairDisplayItalic.svg#PlayfairDisplayItalic') format('svg');
+}
+
+
+
+
+
+
+@font-face{
+  font-family: lato;
+  src: url('/assets/fonts/lato/Lato-Regular.ttf');
+}
+@font-face{
+  font-family: lato-bold;
+  src: url('/assets/fonts/lato/Lato-Bold.ttf');
+}
+@font-face{
+  font-family: playfair;
+  src: url('/assets/fonts/playfair_display/PlayfairDisplay-Italic.ttf');
+}
+
+
+
+
+
+
+
+
+
+//body * {
+//
+//  font-family: PT_Sans, sans-serif;
+//  /*font-weight: bold;*/
+//  font-size: 16px;
+//
+//
+//}
+
+
+
+
+
+

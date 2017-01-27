@@ -1,0 +1,132 @@
+
+$offset: $font-size-title / 1.7;
+
+.picked {
+  position: relative;
+  flex-direction: column;
+  max-width: $wrap-width;
+  //border-top: 2px solid $color-gray3;
+  box-sizing: border-box;
+  margin-top: 70px;
+  margin-bottom: 40px;
+
+  @include title-line($wrap-width);
+}
+
+
+.picked__content {
+  flex-wrap: wrap;
+  align-self: stretch;
+  justify-content: space-between;
+  margin-top: 50px;
+  @media screen and (max-width: $screen-width2) {
+    justify-content: center;
+  }
+}
+
+.picked__section,
+.picked__section--main {
+  flex-direction: column;
+  justify-content: center;
+  width: 30.5%;
+}
+
+.picked__section--main {
+  width: 35.3%;
+  @media screen and (max-width: $screen-width2) {
+    width: 52%;
+  }
+  @media screen and (max-width: $screen-width3) {
+    width: 64%;
+  }
+}
+
+.picked__section {
+  @media screen and (max-width: $screen-width2) {
+    flex-direction: row;
+    width: 100%;
+  }
+  @media screen and (max-width: $screen-width3) {
+    flex-direction: column;
+    width: 64%;
+  }
+}
+
+.picked__item,
+.picked__item--main {
+  position: relative;
+  width: 100%;
+  @media screen and (max-width: $screen-width2) {
+    //margin: 5px;
+    margin: $offset * ( 100vw / $wrap-width);
+  }
+}
+.picked__item--main {
+  height: 100%;
+}
+
+.picked__item:before,
+.picked__item--main:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 17px;
+  bottom: 17px;
+  left: 17px;
+  right: 17px;
+  border: 3px solid $color-white;
+  background: rgba(0, 0, 0, 0);
+  transition: all 0.3s;
+}
+
+.picked__item:hover:before {
+  border: 3px solid transparent;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.picked__section:first-child .picked__item:first-child {
+  margin-bottom: $offset;
+  @media screen and (max-width: $wrap-width) {
+    margin-bottom: $offset * ( 100vw / $wrap-width);
+  }
+}
+
+.picked__section:last-child .picked__item:last-child {
+  margin-top: $offset;
+  @media screen and (max-width: $wrap-width) {
+    margin-top: $offset * ( 100vw / $wrap-width);
+  }
+}
+
+.picked__img,
+.picked__img--main {
+  width: 100%;
+}
+
+.picked__img--main {
+  height: 100%;
+}
+
+.picked__shop {
+  display: block;
+  position: absolute;
+  padding: 10px;
+  bottom: 14%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'LatoRegular';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.0rem;
+  color: $color-white;
+  text-align: center;
+  background: $color-red;
+  opacity: 0;
+  transition: all 0.4s;
+  @include button-shop-anim($butt-degree, $butt-hieght, $butt-color, $butt-time);
+}
+
+.picked__item:hover .picked__shop {
+  opacity: 1;
+}
+
