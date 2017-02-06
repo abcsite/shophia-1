@@ -135,7 +135,7 @@ gulp.task('libs', () => {
                 }
             }
         }
-    ), 
+    ),
         {base: "./src/libs"})
         .pipe(flatten({includeParents: 1}))
         .pipe(newer(cms.modx.libs))
@@ -243,7 +243,9 @@ gulp.task('watch', done => {
 /****************************************************************************************************/
 gulp.task('serve', done => {
     browserSync.init({
-        server: true,
+        // server: true,
+        proxy: "shophia-1",
+        tunnel: "mysite",
         browser: "chrome",
         startPath: '/build',
         open: false

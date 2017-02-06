@@ -1,5 +1,4 @@
 
-
 .top-line {
   position: fixed;
   //position: relative;
@@ -10,19 +9,30 @@
   z-index: 800;
   background: $color-gray3;
   max-width: $wrap-wide-width;
-  //overflow: hidden;
   height: $top-line-height;
-  transition: all $header_time;
-}
-.top-line.hidden{
-  transform: translateY(-$top-line-height);
+  transition: top $menu_anim_time;
 }
 
+.top-line.hidden {
+  //transform: translateY(-100%);
+  top: -$top-line-height;
+  transition: top $menu_anim_time 0s;
+}
+
+// ************** Hidden for small screen
+.top-line.hidden-small {
+  @media screen and (max-width: $screen-width1) {
+    //transform: translateY(-100%);
+    top: -$top-line-height;
+    transition: top $menu_anim_time (1 * $menu_anim_time);
+  }
+}
 
 .top-line__wrap {
   justify-content: space-between;
   //flex-wrap: wrap;
   padding: 0 5px;
+  height: 100%;
   width: $wrap-width;
   margin: 0 auto;
   font-family: 'LatoBold', sans-serif;
@@ -47,13 +57,13 @@ li.top-line__call {
   margin: 17px 0;
 }
 
-.top-line__link {
-  //padding: 0;
-}
 
 .top-line__account-block {
   position: relative;
-  //margin-right:40px;
+  //align-self: stretch;
+  height: 100%;
+  //margin: 0px;
+  //padding: 0px;
   @media screen and (max-width: $screen-width2) {
     width: 150px;
   }
@@ -65,39 +75,37 @@ li.top-line__call {
   display: none;
   padding: 0px 15px;
   width: 100%;
-  height: $top-line-height;
+  height: 100%;
+  cursor: pointer;
+  user-select: none;
   transition: all 0.3s;
 
   @media screen and (max-width: $screen-width2) {
     display: flex;
   }
 }
+
 .top-line__button:hover {
-  box-shadow: inset 1px 1px 3px 2px rgba(0,0,0,0.2);
+  box-shadow: inset 1px 1px 3px 2px rgba(0, 0, 0, 0.2);
 }
 
 .top-line__button-text {
-  margin: 17px 0;
+  height: 100%;
+  //margin: 17px 0;
 }
 
 .top-line__button-arrow {
   width: 20px;
   height: 20px;
-  fill: $color-black;
+  stroke: $color-black;
+  stroke-width: 12;
+  stroke-linecap: square;
   margin-left: 5px;
 }
 
 .top-line__account-list {
   @media screen and (max-width: $screen-width2) {
-    display: none;
-    width: 100%;
-    background: $color-gray3;
-  }
-}
-
-.top-line__button:hover + .top-line__account-list,
-.top-line__account-list:hover {
-  @media screen and (max-width: $screen-width2) {
+    //display: none;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -106,19 +114,37 @@ li.top-line__call {
     top: 100%;
     left: 0px;
     z-index: 1000;
-    //border: 1px solid $color-gray2;
+    width: 100%;
+    background: $color-gray3;
+    overflow: hidden;
+    height: 0px;
+    transition:  height 0.3s;
+
+    //&.menu-show {
+    //  height: 4 * $top-line-height;
+    //}
+
   }
 }
 
-.top-line__account {
+.top-line__account-block:hover .top-line__account-list.menu-show{
+  @media screen and (max-width: $screen-width2){
+    height: 400%;
+  }
+}
+
+
+
+
+.top-line__account-item {
   position: relative;
   padding: 0px 20px;
   margin: 0px 0px;
-  height: $top-line-height;
+  height: 100%;
   box-sizing: border-box;
   @include menu-text-anim-parent(0.2s, $color-black, 1px, -0.2em);
 
-  &:before{
+  &:before {
     content: '';
     display: block;
     position: absolute;
@@ -133,7 +159,6 @@ li.top-line__call {
     display: none;
   }
 
-
   @media screen and (max-width: $screen-width2) {
     &:before {
       display: none;
@@ -145,13 +170,9 @@ li.top-line__call {
     transition: all 0.2s;
 
     &:hover {
-      box-shadow: inset 1px 1px 3px 2px rgba(0,0,0,0.2);
+      box-shadow: inset 1px 1px 3px 2px rgba(0, 0, 0, 0.2);
     }
   }
-}
-
-.top-line__link{
-  //@include menu-text-anim-parent(0.2s, $color-black, 1px, -0.2em);
 }
 
 

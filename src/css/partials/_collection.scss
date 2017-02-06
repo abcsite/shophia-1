@@ -8,11 +8,12 @@ $buttons-height: 3em;
   max-width: $wrap-width;
   //border-top: 2px solid $color-gray3;
   box-sizing: border-box;
+  margin: 0 auto;
   margin-top: 70px;
   margin-bottom: 40px;
   font-size: 1rem;
 
-  @include title-line($wrap-width);
+  @include title-line(100%);
 
   @media screen and (max-width: $screen-width3) {
     font-size: 0.7rem;

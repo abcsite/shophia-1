@@ -5,72 +5,81 @@
     <div class="top-line__wrap">
         <ul class="top-line__left">
             <li class="top-line__tel">
-                <a href="" class="top-line__link">
-                    <svg role="img" class="top-line__tel-img telephone" viewBox="0 0 512 512">
-                        <use xlink:href="assets/img/svg/svg-symbols.svg#telephone"></use>
-                    </svg>
-                </a>
+                <svg class="top-line__tel-img telephone" viewBox="0 0 512 512">
+                    <use xlink:href="assets/img/svg/svg-symbols.svg#telephone"></use>
+                </svg>
             </li>
             <li class="top-line__call">
-                <a href="" class="top-line__link">Call +001 555 801</a>
+                Call +001 555 801
             </li>
         </ul>
         <div class="top-line__account-block">
-            <a class="top-line__button" href="">
+            <div class="top-line__button">
                 <span class="top-line__button-text">ACCOUNT</span>
-                <svg role="img" class="top-line__button-arrow arrow-down" viewBox="0 0 128 128">
+                <svg class="top-line__button-arrow arrow-down" viewBox="0 0 128 128">
                     <use xlink:href="assets/img/svg/svg-symbols.svg#arrow-down"></use>
                 </svg>
-            </a>
+            </div>
             <ul class="top-line__account-list">
-                <li class="top-line__account"><a href="" class="top-line__link">WELCOME MSG!</a></li>
-                <li class="top-line__account"><a href="" class="top-line__link">MY ACCOUNT</a></li>
-                <li class="top-line__account"><a href="" class="top-line__link">MY WHISTLIST</a></li>
-                <li class="top-line__account"><a href="" class="top-line__link">LOGIN</a></li>
+                <li class="top-line__account-item"><a href="#" class="top-line__link">WELCOME MSG!</a></li>
+                <li class="top-line__account-item"><a href="#" class="top-line__link">MY ACCOUNT</a></li>
+                <li class="top-line__account-item"><a href="#" class="top-line__link">MY WHISTLIST</a></li>
+                <li class="top-line__account-item"><a href="#" class="top-line__link">LOGIN</a></li>
             </ul>
         </div>
     </div>
 </div>
 
 <header>
-    <div class="header">
+    <div class="header__wrap">
+        <!--<div class="header__menu-button">Menu</div>-->
+        <div class="header__button">
+            <svg class="header__button-arrow arrow-down" viewBox="0 0 128 128">
+                <use xlink:href="assets/img/svg/svg-symbols.svg#arrow-down"></use>
+            </svg>
+        </div>
+        <div class="header__button-right">
+            <svg class="header__button-arrow arrow-down" viewBox="0 0 128 128">
+                <use xlink:href="assets/img/svg/svg-symbols.svg#arrow-down"></use>
+            </svg>
+        </div>
         <div class="header__nav-block">
             <!--<a class="header__nav-button">Menu</a>-->
-            <ul role="nav" class="header__nav">
-                <li class="header__nav-item"><a href="" class="header__nav-link">Home</a></li>
-                <li class="header__nav-item"><a href="" class="header__nav-link">Gallery</a></li>
-                <li class="header__nav-item"><a href="" class="header__nav-link">Categories</a></li>
-                <li class="header__nav-item"><a href="" class="header__nav-link">Pages</a></li>
+            <ul class="header__nav">
+                <li class="header__nav-item"><a href="#" class="header__nav-link">Home</a></li>
+                <li class="header__nav-item"><a href="#" class="header__nav-link">Gallery</a></li>
+                <li class="header__nav-item"><a href="#" class="header__nav-link">Categories</a></li>
+                <li class="header__nav-item"><a href="#" class="header__nav-link">Pages</a></li>
             </ul>
         </div>
-        <h1 class="header__logo">Shophia</h1>
+        <a class="header__logo" href="#"><h1 class="header__logo-text">Shophia</h1></a>
         <div class="header__right">
             <!--<div class="header__social-button">Social</div>-->
             <ul class="header__social">
                 <li class="header__social-item">
-                    <a href="" class="header__social-link">
-                        <svg role="img" class="header__social-svg facebook" viewBox="0 0 56.693 56.693">
+                    <a href="#" class="header__social-link">
+                        <svg class="header__social-svg facebook" viewBox="0 0 56.693 56.693">
                             <use xlink:href="assets/img/svg/svg-symbols.svg#facebook"></use>
                         </svg>
                     </a>
                 </li>
                 <li class="header__social-item">
-                    <a href="" class="header__social-link">
-                        <svg role="img" class="header__social-svg twitter" viewBox="0 0 56.693 56.693">
+                    <a href="#" class="header__social-link">
+                        <svg class="header__social-svg twitter" viewBox="0 0 56.693 56.693">
                             <use xlink:href="assets/img/svg/svg-symbols.svg#twitter"></use>
                         </svg>
                     </a>
                 </li>
                 <li class="header__social-item">
-                    <a href="" class="header__social-link">
-                        <svg role="img" class="header__social-svg pinterest" viewBox="0 0 56.693 56.693">
+                    <a href="#" class="header__social-link">
+                        <svg class="header__social-svg pinterest" viewBox="0 0 56.693 56.693">
                             <use xlink:href="assets/img/svg/svg-symbols.svg#pinterest"></use>
                         </svg>
                     </a>
                 </li>
                 <li class="header__social-item">
-                    <a href="" class="header__social-link">
-                        <svg role="img" class="header__social-svg instagram" viewBox="0 0 56.693 56.693">
+                    <a href="#" class="header__social-link">
+                        <svg class="header__social-svg instagram" viewBox="0 0 56.693 56.693">
                             <use xlink:href="assets/img/svg/svg-symbols.svg#instagram"></use>
                         </svg>
                     </a>
@@ -96,9 +105,9 @@
                 <div class="slider__bann-text">UP TO</div>
                 <div class="slider__bann-text slider__bann-text--mid">50% OFF</div>
             </div>
-            <a class="slider__shop" href="">SHOP NOW</a>
+            <a class="slider__shop" href="#">SHOP NOW</a>
         </div>
-        <div class="slider__list">
+        <div class="slider__list slick-slider">
             <div class="slider__item">
                 <img class="slider__img" src="assets/images/slider.gif" alt="">
             </div>
@@ -118,7 +127,7 @@
 <div class="support">
     <div class="support__list">
         <div class="support__item">
-            <svg role="img" class="support__item-img support-aircraft" viewBox="0 0 38 38">
+            <svg class="support__item-img support-aircraft" viewBox="0 0 38 38">
                 <use xlink:href="assets/img/svg/svg-symbols.svg#support-aircraft"></use>
             </svg>
 
@@ -128,7 +137,7 @@
             </div>
         </div>
         <div class="support__item">
-            <svg role="img" class="support__item-img support-time" viewBox="0 0 41 42">
+            <svg class="support__item-img support-time" viewBox="0 0 41 42">
                 <use xlink:href="assets/img/svg/svg-symbols.svg#support-time"></use>
             </svg>
 
@@ -138,7 +147,7 @@
             </div>
         </div>
         <div class="support__item">
-            <svg role="img" class="support__item-img support-wheel" viewBox="0 0 48 49">
+            <svg class="support__item-img support-wheel" viewBox="0 0 48 49">
                 <use xlink:href="assets/img/svg/svg-symbols.svg#support-wheel"></use>
             </svg>
 
@@ -159,11 +168,11 @@
         <div class="picked__content">
             <div class="picked__section">
                 <div class="picked__item">
-                    <a class="picked__shop" href="">SHOP NOW</a>
+                    <a class="picked__shop" href="#">SHOP NOW</a>
                     <img class="picked__img" src="assets/images/features-1.gif" alt="">
                 </div>
                 <div class="picked__item">
-                    <a class="picked__shop" href="">SHOP NOW</a>
+                    <a class="picked__shop" href="#">SHOP NOW</a>
                     <img class="picked__img" src="assets/images/features-2.gif" alt="">
                 </div>
             </div>
@@ -174,11 +183,11 @@
             </div>
             <div class="picked__section">
                 <div class="picked__item">
-                    <a class="picked__shop" href="">SHOP NOW</a>
+                    <a class="picked__shop" href="#">SHOP NOW</a>
                     <img class="picked__img" src="assets/images/features-3.gif" alt="">
                 </div>
                 <div class="picked__item">
-                    <a class="picked__shop" href="">SHOP NOW</a>
+                    <a class="picked__shop" href="#">SHOP NOW</a>
                     <img class="picked__img" src="assets/images/features-4.gif" alt="">
                 </div>
             </div>
@@ -192,80 +201,80 @@
         </div>
         <div class="collection__content">
             <div class="collection__item">
-                <a class="collection__img-wrap" href="">
+                <a class="collection__img-wrap" href="#">
                     <img class="collection__img" src="assets/images/recent-1.gif" alt="">
                 </a>
-                <div class="collection__button">+ADD TO CART</div>
+                <a href="#" class="collection__button">+ADD TO CART</a>
                 <div class="collection__discount collection__discount--show">
                     <span class="collection__discount-num">20</span>
                     <span class="collection__discount-perc">%</span>
                 </div>
             </div>
             <div class="collection__item">
-                <a class="collection__img-wrap" href="">
+                <a class="collection__img-wrap" href="#">
                     <img class="collection__img" src="assets/images/recent-2.gif" alt="">
                 </a>
-                <div class="collection__button">+ADD TO CART</div>
+                <a href="#" class="collection__button">+ADD TO CART</a>
                 <div class="collection__discount">
                     <span class="collection__discount-num">20</span>
                     <span class="collection__discount-perc">%</span>
                 </div>
             </div>
             <div class="collection__item">
-                <a class="collection__img-wrap" href="">
+                <a class="collection__img-wrap" href="#">
                     <img class="collection__img" src="assets/images/recent-3.gif" alt="">
                 </a>
-                <div class="collection__button">+ADD TO CART</div>
+                <a href="#" class="collection__button">+ADD TO CART</a>
                 <div class="collection__discount">
                     <span class="collection__discount-num">20</span>
                     <span class="collection__discount-perc">%</span>
                 </div>
             </div>
             <div class="collection__item">
-                <a class="collection__img-wrap" href="">
+                <a class="collection__img-wrap" href="#">
                     <img class="collection__img" src="assets/images/recent-4.gif" alt="">
                 </a>
-                <div class="collection__button">+ADD TO CART</div>
+                <a href="#" class="collection__button">+ADD TO CART</a>
                 <div class="collection__discount collection__discount--show">
                     <span class="collection__discount-num">40</span>
                     <span class="collection__discount-perc">%</span>
                 </div>
             </div>
             <div class="collection__item">
-                <a class="collection__img-wrap" href="">
+                <a class="collection__img-wrap" href="#">
                     <img class="collection__img" src="assets/images/recent-5.gif" alt="">
                 </a>
-                <div class="collection__button">+ADD TO CART</div>
+                <a href="#" class="collection__button">+ADD TO CART</a>
                 <div class="collection__discount collection__discount--show">
                     <span class="collection__discount-num">20</span>
                     <span class="collection__discount-perc">%</span>
                 </div>
             </div>
             <div class="collection__item">
-                <a class="collection__img-wrap" href="">
+                <a class="collection__img-wrap" href="#">
                     <img class="collection__img" src="assets/images/recent-6.gif" alt="">
                 </a>
-                <div class="collection__button">+ADD TO CART</div>
+                <a href="#" class="collection__button">+ADD TO CART</a>
                 <div class="collection__discount">
                     <span class="collection__discount-num">20</span>
                     <span class="collection__discount-perc">%</span>
                 </div>
             </div>
             <div class="collection__item">
-                <a class="collection__img-wrap" href="">
+                <a class="collection__img-wrap" href="#">
                     <img class="collection__img" src="assets/images/recent-7.gif" alt="">
                 </a>
-                <div class="collection__button">+ADD TO CART</div>
+                <a href="#" class="collection__button">+ADD TO CART</a>
                 <div class="collection__discount">
                     <span class="collection__discount-num">20</span>
                     <span class="collection__discount-perc">%</span>
                 </div>
             </div>
             <div class="collection__item">
-                <a class="collection__img-wrap" href="">
+                <a class="collection__img-wrap" href="#">
                     <img class="collection__img" src="assets/images/recent-8.gif" alt="">
                 </a>
-                <div class="collection__button">+ADD TO CART</div>
+                <a href="#" class="collection__button">+ADD TO CART</a>
                 <div class="collection__discount collection__discount--show">
                     <span class="collection__discount-num">40</span>
                     <span class="collection__discount-perc">%</span>
@@ -303,29 +312,29 @@
 
     <article class="customers">
         <!--<div class="wrap customers__wrap">-->
-            <div class="title-block">
-                <h2 class="title-block__text">Customers Says</h2>
-            </div>
-            <div class="customers__content">
-                <div class="customers__item">
-                    <img class="customers__img" src="assets/images/sandra-dewi.png" alt="">
-                    <div class="customers__text-block">
-                        <p class="customers__text">Sed ut perspiciatis <br> unde omnis iste natus error sit voluptatem
-                            accusantium doloremque</p>
-                        <div class="customers__name">Sandra Dewi</div>
-                        <div class="customers__profession">FASHION STYLISH</div>
-                    </div>
-                </div>
-                <div class="customers__item">
-                    <img class="customers__img" src="assets/images/shaheer-sheikh.png" alt="">
-                    <div class="customers__text-block">
-                        <p class="customers__text">Sed ut perspiciatis <br> unde omnis iste natus error sit voluptatem
-                            accusantium doloremque</p>
-                        <div class="customers__name">Shaheer Sheikh</div>
-                        <div class="customers__profession">DESIGNER</div>
-                    </div>
+        <div class="title-block">
+            <h2 class="title-block__text">Customers Says</h2>
+        </div>
+        <div class="customers__content">
+            <div class="customers__item">
+                <img class="customers__img" src="assets/images/sandra-dewi.png" alt="">
+                <div class="customers__text-block">
+                    <p class="customers__text">Sed ut perspiciatis <br> unde omnis iste natus error sit voluptatem
+                        accusantium doloremque</p>
+                    <div class="customers__name">Sandra Dewi</div>
+                    <div class="customers__profession">FASHION STYLISH</div>
                 </div>
             </div>
+            <div class="customers__item">
+                <img class="customers__img" src="assets/images/shaheer-sheikh.png" alt="">
+                <div class="customers__text-block">
+                    <p class="customers__text">Sed ut perspiciatis <br> unde omnis iste natus error sit voluptatem
+                        accusantium doloremque</p>
+                    <div class="customers__name">Shaheer Sheikh</div>
+                    <div class="customers__profession">DESIGNER</div>
+                </div>
+            </div>
+        </div>
         <!--</div>-->
     </article>
 
@@ -336,40 +345,40 @@
         <div class="nav-bottom__block">
             <div class="nav-bottom__title">SHOPS</div>
             <ul class="nav-bottom__list">
-                <li class="nav-bottom__item"><a href="" class="nav-bottom__link">New In</a></li>
-                <li class="nav-bottom__item"><a href="" class="nav-bottom__link">Women</a></li>
-                <li class="nav-bottom__item"><a href="" class="nav-bottom__link">Men</a></li>
-                <li class="nav-bottom__item"><a href="" class="nav-bottom__link">Shoes</a></li>
-                <li class="nav-bottom__item"><a href="" class="nav-bottom__link">Bags &amp; Accessories</a></li>
-                <li class="nav-bottom__item"><a href="" class="nav-bottom__link">Top Brands</a></li>
-                <li class="nav-bottom__item"><a href="" class="nav-bottom__link">Sale &amp; Special Offers</a></li>
-                <li class="nav-bottom__item"><a href="" class="nav-bottom__link">Lookbook</a></li>
+                <li class="nav-bottom__item"><a href="#" class="nav-bottom__link">New In</a></li>
+                <li class="nav-bottom__item"><a href="#" class="nav-bottom__link">Women</a></li>
+                <li class="nav-bottom__item"><a href="#" class="nav-bottom__link">Men</a></li>
+                <li class="nav-bottom__item"><a href="#" class="nav-bottom__link">Shoes</a></li>
+                <li class="nav-bottom__item"><a href="#" class="nav-bottom__link">Bags &amp; Accessories</a></li>
+                <li class="nav-bottom__item"><a href="#" class="nav-bottom__link">Top Brands</a></li>
+                <li class="nav-bottom__item"><a href="#" class="nav-bottom__link">Sale &amp; Special Offers</a></li>
+                <li class="nav-bottom__item"><a href="#" class="nav-bottom__link">Lookbook</a></li>
             </ul>
         </div>
         <div class="nav-bottom__block">
             <div class="nav-bottom__title">INFORMATION</div>
             <ul class="nav-bottom__list">
-                <li class="nav-bottom__item"><a href="" class="nav-bottom__link">About us</a></li>
-                <li class="nav-bottom__item"><a href="" class="nav-bottom__link">Customer Service</a></li>
-                <li class="nav-bottom__item"><a href="" class="nav-bottom__link"> New Collection</a></li>
-                <li class="nav-bottom__item"><a href="" class="nav-bottom__link">Best Sellers</a></li>
-                <li class="nav-bottom__item"><a href="" class="nav-bottom__link">Manufacturers</a></li>
-                <li class="nav-bottom__item"><a href="" class="nav-bottom__link">Privacy policy</a></li>
-                <li class="nav-bottom__item"><a href="" class="nav-bottom__link">Terms &amp; Condition</a></li>
-                <li class="nav-bottom__item"><a href="" class="nav-bottom__link">Blog</a></li>
+                <li class="nav-bottom__item"><a href="#" class="nav-bottom__link">About us</a></li>
+                <li class="nav-bottom__item"><a href="#" class="nav-bottom__link">Customer Service</a></li>
+                <li class="nav-bottom__item"><a href="#" class="nav-bottom__link"> New Collection</a></li>
+                <li class="nav-bottom__item"><a href="#" class="nav-bottom__link">Best Sellers</a></li>
+                <li class="nav-bottom__item"><a href="#" class="nav-bottom__link">Manufacturers</a></li>
+                <li class="nav-bottom__item"><a href="#" class="nav-bottom__link">Privacy policy</a></li>
+                <li class="nav-bottom__item"><a href="#" class="nav-bottom__link">Terms &amp; Condition</a></li>
+                <li class="nav-bottom__item"><a href="#" class="nav-bottom__link">Blog</a></li>
             </ul>
         </div>
         <div class="nav-bottom__block">
             <div class="nav-bottom__title">CUSTOMER SERVICE</div>
             <ul class="nav-bottom__list">
-                <li class="nav-bottom__item"><a href="" class="nav-bottom__link">Search Terms</a></li>
-                <li class="nav-bottom__item"><a href="" class="nav-bottom__link">Advanced Search</a></li>
-                <li class="nav-bottom__item"><a href="" class="nav-bottom__link">Orders and Returns</a></li>
-                <li class="nav-bottom__item"><a href="" class="nav-bottom__link">Contact Us</a></li>
-                <li class="nav-bottom__item"><a href="" class="nav-bottom__link">RSS</a></li>
-                <li class="nav-bottom__item"><a href="" class="nav-bottom__link">Help &amp; FAQs</a></li>
-                <li class="nav-bottom__item"><a href="" class="nav-bottom__link">Consultant</a></li>
-                <li class="nav-bottom__item"><a href="" class="nav-bottom__link">Store Locations</a></li>
+                <li class="nav-bottom__item"><a href="#" class="nav-bottom__link">Search Terms</a></li>
+                <li class="nav-bottom__item"><a href="#" class="nav-bottom__link">Advanced Search</a></li>
+                <li class="nav-bottom__item"><a href="#" class="nav-bottom__link">Orders and Returns</a></li>
+                <li class="nav-bottom__item"><a href="#" class="nav-bottom__link">Contact Us</a></li>
+                <li class="nav-bottom__item"><a href="#" class="nav-bottom__link">RSS</a></li>
+                <li class="nav-bottom__item"><a href="#" class="nav-bottom__link">Help &amp; FAQs</a></li>
+                <li class="nav-bottom__item"><a href="#" class="nav-bottom__link">Consultant</a></li>
+                <li class="nav-bottom__item"><a href="#" class="nav-bottom__link">Store Locations</a></li>
             </ul>
         </div>
         <div class="nav-bottom__right">
@@ -377,36 +386,36 @@
                 <div class="nav-bottom__social-title">STAY CONNECTED</div>
                 <ul class="nav-bottom__social-list">
                     <li class="nav-bottom__social-item">
-                        <a href="" class="nav-bottom__social-link">
-                            <svg role="img" class="nav-bottom__social-img facebook" viewBox="0 0 56.693 56.693">
+                        <a href="#" class="nav-bottom__social-link">
+                            <svg class="nav-bottom__social-img facebook" viewBox="0 0 56.693 56.693">
                                 <use xlink:href="assets/img/svg/svg-symbols.svg#facebook"></use>
                             </svg>
                         </a>
                     </li>
                     <li class="nav-bottom__social-item">
-                        <a href="" class="nav-bottom__social-link">
-                            <svg role="img" class="nav-bottom__social-img twitter" viewBox="0 0 56.693 56.693">
+                        <a href="#" class="nav-bottom__social-link">
+                            <svg class="nav-bottom__social-img twitter" viewBox="0 0 56.693 56.693">
                                 <use xlink:href="assets/img/svg/svg-symbols.svg#twitter"></use>
                             </svg>
                         </a>
                     </li>
                     <li class="nav-bottom__social-item">
-                        <a href="" class="nav-bottom__social-link">
-                            <svg role="img" class="nav-bottom__social-img instagram" viewBox="0 0 56.693 56.693">
+                        <a href="#" class="nav-bottom__social-link">
+                            <svg class="nav-bottom__social-img instagram" viewBox="0 0 56.693 56.693">
                                 <use xlink:href="assets/img/svg/svg-symbols.svg#instagram"></use>
                             </svg>
                         </a>
                     </li>
                     <li class="nav-bottom__social-item">
-                        <a href="" class="nav-bottom__social-link">
-                            <svg role="img" class="nav-bottom__social-img pinterest" viewBox="0 0 56.693 56.693">
+                        <a href="#" class="nav-bottom__social-link">
+                            <svg class="nav-bottom__social-img pinterest" viewBox="0 0 56.693 56.693">
                                 <use xlink:href="assets/img/svg/svg-symbols.svg#pinterest"></use>
                             </svg>
                         </a>
                     </li>
                     <li class="nav-bottom__social-item">
-                        <a href="" class="nav-bottom__social-link">
-                            <svg role="img" class="nav-bottom__social-img rss" viewBox="0 0 56.693 56.693">
+                        <a href="#" class="nav-bottom__social-link">
+                            <svg class="nav-bottom__social-img rss" viewBox="0 0 56.693 56.693">
                                 <use xlink:href="assets/img/svg/svg-symbols.svg#rss"></use>
                             </svg>
                         </a>
@@ -425,51 +434,47 @@
     </div>
 </aside>
 
-<!--<footer class="wrap footer">-->
-<!--<div class="footer__copyright">-->
-<!--<p>-->
-<!--&copy; 2015 Shopia Fashion Store Shopify.-->
-<!--<br>All Rights Reserved. Ecommerce Software by Shopify-->
-<!--<br>Disigned by MoccaLabs.com-->
-<!--</p>-->
-<!--</div>-->
-<!--<ul class="footer__cart-list">-->
-<!--<li>-->
-<!--<a href="" class="footer__cart-item">-->
-<!--<svg role="img" class="footer__cart-img visa_logo" viewBox="0 0 282 92.637756">-->
-<!--<use xlink:href="assets/img/svg/svg-symbols.svg#visa_logo"></use>-->
-<!--</svg>-->
 
-<!--</a>-->
-<!--</li>-->
-<!--<li>-->
-<!--<a href="" class="footer__cart-item">-->
-<!--<svg role="img" class="footer__cart-img mastercard_logo" viewBox="0 0 300 180">-->
-<!--<use xlink:href="assets/img/svg/svg-symbols.svg#mastercard_logo"></use>-->
-<!--</svg>-->
-
-<!--</a>-->
-<!--</li>-->
-<!--<li>-->
-<!--<a href="" class="footer__cart-item">-->
-<!--<img  class="footer__cart-img american-express" src="assets/img/american-express-logo.jpg" alt="">-->
-
-<!--</a>-->
-<!--</li>-->
-<!--<li>-->
-<!--<a href="" class="footer__cart-item">-->
-<!--<img class="footer__cart-img discover"  src="assets/img/discover-card-logo.png" alt="">-->
-
-<!--</a>-->
-<!--</li>-->
-<!--</ul>-->
-<!--<div class="footer__scroll-button">-->
-<!--<svg role="img" class="footer__arrow-up" viewBox="0 0 128 128">-->
-<!--<use xlink:href="assets/img/svg/svg-symbols.svg#arrow-up"></use>-->
-<!--</svg>-->
-
-<!--</div>-->
-<!--</footer>-->
+<footer class="wrap footer">
+    <div class="footer__wrap">
+        <span class="footer__copyright">
+            &copy; 2015 Shopia Fashion Store Shopify.
+            <br>All Rights Reserved. Ecommerce Software by Shopify
+            <br>Disigned by MoccaLabs.com
+        </span>
+        <ul class="footer__cart-list">
+            <li class="footer__cart-item">
+                <a href="#" class="footer__cart-link">
+                    <svg class="footer__cart-img visa_logo" viewBox="0 0 282 92.637756">
+                        <use xlink:href="assets/img/svg/svg-symbols.svg#visa_logo"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="footer__cart-item">
+                <a href="#" class="footer__cart-link">
+                    <svg class="footer__cart-img mastercard_logo" viewBox="0 0 300 180">
+                        <use xlink:href="assets/img/svg/svg-symbols.svg#mastercard_logo"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="footer__cart-item">
+                <a href="#" class="footer__cart-link">
+                    <img class="footer__cart-img american-express" src="assets/img/american-express-logo.jpg" alt="">
+                </a>
+            </li>
+            <li class="footer__cart-item">
+                <a href="#" class="footer__cart-link">
+                    <img class="footer__cart-img discover" src="assets/img/discover-card-logo.png" alt="">
+                </a>
+            </li>
+        </ul>
+        <div class="footer__scroll-button">
+            <svg class="footer__arrow-up" viewBox="0 0 128 128">
+                <use xlink:href="assets/img/svg/svg-symbols.svg#arrow-up"></use>
+            </svg>
+        </div>
+    </div>
+</footer>
 
 
 //= templates/_foot.html

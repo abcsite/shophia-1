@@ -35,6 +35,49 @@
 }
 
 
+@mixin block-title($font-size) {
+  & {
+    display: inline-block;
+    position: relative;
+    //top: $offset-top;
+    transform: translateY(-50%);
+    padding: 0px 14%;
+    background: $color-white;
+  }
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0.5 * $font-size;
+    height: 0.5 * $font-size;
+    left: 8%;
+    top: 40%;
+    transform: translateY(-50%);
+    transform: rotate(45deg);
+    background: $color-orange1;
+  }
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0.5 * $font-size;
+    height: 0.5 * $font-size;
+    right: 8%;
+    top: 40%;
+    transform: translateY(-50%);
+    transform: rotate(45deg);
+    background: $color-orange1;
+  }
+  & h2 {
+    font-family: 'PlayfairDisplayItalic';
+    font-style: normal;
+    font-weight: bolder;
+    font-size: $font-size;
+    letter-spacing: 0.1em;
+    //transform: scaleX(1.1);
+  }
+}
+
 
 
 
@@ -99,18 +142,18 @@
 
 
 @mixin menu_anim($n, $height, $time, $delay) {
-  @for $i from 1 through ($n - 1) {
+  @for $i from 0 through ($n - 1) {
     &:nth-child(#{$i + 1}) {
       top: ($i * $height);
-      transition: all $time (($i - 1) * $delay);
+      transition: all $time ((($i) * $delay) + $time);
     }
   }
 }
 @mixin menu_anim_revers($n, $height, $time, $delay) {
-  @for $i from 1 through ($n - 1) {
+  @for $i from 0 through ($n - 1) {
     &:nth-child(#{$i + 1}) {
       top: ($i * $height);
-      transition: all $time (($n - $i - 1) * $delay);
+      transition: all $time (($n - $i) * $delay);
     }
   }
 }
@@ -174,49 +217,6 @@
   }
   &:hover:after {
     height: $hieght;
-  }
-}
-
-@mixin block-title($font-size) {
-  & {
-    display: inline-block;
-    position: relative;
-    //top: $offset-top;
-    transform: translateY(-50%);
-    padding: 0px 14%;
-    background: $color-white;
-  }
-  &:before {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 0.5 * $font-size;
-    height: 0.5 * $font-size;
-    left: 8%;
-    top: 40%;
-    transform: translateY(-50%);
-    transform: rotate(45deg);
-    background: $color-orange1;
-  }
-  &:after {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 0.5 * $font-size;
-    height: 0.5 * $font-size;
-    right: 8%;
-    top: 40%;
-    transform: translateY(-50%);
-    transform: rotate(45deg);
-    background: $color-orange1;
-  }
-  & h2 {
-    font-family: 'PlayfairDisplayItalic';
-    font-style: normal;
-    font-weight: bolder;
-    font-size: $font-size;
-    letter-spacing: 0.1em;
-    //transform: scaleX(1.1);
   }
 }
 

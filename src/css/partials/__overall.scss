@@ -1,11 +1,8 @@
 // This file defines the common properties for all the blocks (files)
 
 html {
-  //font-family: krinkes, sans-serif;
-  //font-style: italic;
   font-size: $font-size0;
 }
-
 
 body *{
   display: flex;
@@ -17,21 +14,18 @@ body *{
 body > script{
   display: none;
 }
-//body{
-//  display: flex;
-//  flex-direction: column ;
-//  //justify-content: center;
-//  //align-items: stretch;
-//}
 body > *{
   margin: 0 auto;
   //border: 3px solid black;
 }
 main{
+  display: block;
   max-width: $wrap-wide-width;
-  flex-direction: column ;
+  //flex-direction: column ;
   //justify-content: center;
   //align-items: stretch;
+  //border: 2px solid $color-gray3;
+  //margin: 0 auto;
 }
 
 ul {
@@ -57,5 +51,4 @@ a{
     @include block-title(5vw);
   }
 }
-
 

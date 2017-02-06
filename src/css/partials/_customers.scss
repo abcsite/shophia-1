@@ -7,11 +7,12 @@ $offset: 2rem;
   max-width: $wrap-wide-width;
   //border-top: 2px solid $color-gray3;
   box-sizing: border-box;
+  margin: 0 auto;
   margin-top: 70px;
   margin-bottom: 0px;
   font-size: 1rem;
 
-  @include title-line($wrap-width);
+  @include title-line(100%);
 }
 
 .customers__content {

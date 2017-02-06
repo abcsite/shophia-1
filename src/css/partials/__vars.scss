@@ -4,12 +4,14 @@ $color-white: #fff;
 $color-orange1: #d9bf8f;
 $color-orange2: #feab12;
 $color-red: #f0975c;
+$color-gray0: #111;
 $color-gray1: #323030;
 $color-gray2: #7f7e7e;
 $color-gray3: #f2f2f2;
 
-// HEADER ANIMATION
-$header_time: 0.3s;
+// HEADER, TOP-LINE ANIMATION
+$menu_anim_time: 0.25s;
+$menu_anim_delay: $menu_anim_time / 4;
 $top-line-height: 40px;
 
 // BUTTONS ANIMATION

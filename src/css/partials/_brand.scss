@@ -1,27 +1,31 @@
-
 $offset: 3rem;
 
 .brand {
+  //display: block;
   position: relative;
   flex-direction: column;
+  //align-self: stretch;
+  //flex-shrink: 2;
   max-width: $wrap-width;
   //border-top: 2px solid $color-gray3;
   box-sizing: border-box;
+  margin: 0 auto;
   margin-top: 60px;
   margin-bottom: 30px;
 
-  @include title-line($wrap-width);
+  @include title-line(100%);
 }
 
-
 .brand__content {
+  //align-self: stretch;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   //align-items: flex-end;
+  box-sizing: border-box;
   width: 100%;
   //margin: auto;
-  margin-top: 50px;
+  margin-top: 20px;
   padding: 0 ($offset / 2);
 
   @media screen and (max-width: $screen-width3) {
@@ -29,10 +33,9 @@ $offset: 3rem;
   }
 }
 
-
 .brand__item {
   //align-items: flex-end;
-
+  //flex-shrink: 2;
   @include width-column(6, $offset);
 
   @media screen and (max-width: $screen-width2) {
@@ -42,7 +45,8 @@ $offset: 3rem;
     @include width-column(3, 0.5 * $offset);
   }
 }
-.brand__img{
+
+.brand__img {
   //align-items: flex-end;
   width: 100%;
 }

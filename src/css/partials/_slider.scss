@@ -1,30 +1,40 @@
 .slider {
+  display: block;
   max-width: $wrap-wide-width;
+  margin: 0 auto;
+  //transition: all (0 * $menu_anim_time) (0 * $menu_anim_delay);
 }
 
-.slider__block{
+.slider__block {
+  //display: block;
+  flex-direction: column;
   position: relative;
-  justify-content: center ;
-  width: $wrap-wide-width;
+  justify-content: center;
+  max-width: $wrap-wide-width;
   margin: 0 auto;
 }
 
-.slider__banner{
+.slider__banner {
   position: absolute;
-  z-index: 100;
+  //z-index: 100;
   top: 0px;
+  left: 0px;
   width: 100%;
   height: 100%;
-  flex-direction: column ;
-  justify-content: center ;
+  //bottom: 50px;
+  flex-direction: column;
+  justify-content: center;
+
   @media screen and (max-width: $screen-width2) {
-    justify-content: flex-end ;
+    justify-content: flex-end;
   }
 }
-.slider__bann{
+
+.slider__bann {
   position: relative;
-  flex-direction: column ;
-  justify-content: space-around ;
+  z-index: 100;
+  flex-direction: column;
+  justify-content: space-around;
   width: 20%;
   height: 40%;
   border: 3px solid $color-white;
@@ -39,32 +49,36 @@
     border: 1px solid $color-white;
   }
 }
-.slider__bann:before{
+
+.slider__bann:before {
   content: '';
   display: block;
   position: absolute;
-  flex-direction: column ;
+  flex-direction: column;
   top: 2px;
   bottom: 2px;
   left: 2px;
   right: 2px;
   border: 1px solid $color-white;
 }
-.slider__bann-text{
+
+.slider__bann-text {
   color: $color-white;
   font-size: 1.2em;
   @media screen and (max-width: $screen-width2) {
     font-size: 0.9em;
   }
 }
-.slider__bann-text--big{
+
+.slider__bann-text--big {
   font-size: 3em;
   color: $color-black;
   @media screen and (max-width: $screen-width2) {
     font-size: 1.5em;
   }
 }
-.slider__bann-text--mid{
+
+.slider__bann-text--mid {
   font-size: 1.7em;
   color: $color-black;
   @media screen and (max-width: $screen-width2) {
@@ -72,9 +86,7 @@
   }
 }
 
-
-
-.slider__shop{
+.slider__shop {
   z-index: 100;
   padding: 0.6em 1em;
   background: $color-red;
@@ -82,6 +94,7 @@
   font-family: 'LatoBold', sans-serif;
   font-size: 1.1em;
   margin: 2em;
+
   @include button-shop-anim($butt-degree, $butt-hieght, $butt-color, $butt-time);
 
   @media screen and (max-width: $screen-width2) {
@@ -90,18 +103,81 @@
   }
 }
 
-
-
 .slider__list,
 .slider__item,
-.slider__img{
-  display: block;
+.slider__img {
+  //display: block;
   width: 100%;
   height: auto;
 }
 .slider__item{
   display: none;
 }
-.slider__item:first-child{
-  display: block;
+
+
+
+
+/***********   SLIDER: slick-carousel   ***************/
+
+.slick-slider {
+
+  .slick-dots {
+    position: absolute;
+    bottom: 25px;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+  }
+  .slick-dots li {
+    position: relative;
+    display: inline-block;
+    margin: 0 10px;
+    padding: 0;
+
+    @media screen and (max-width: $screen-width2) {
+      display: none;
+    }
+  }
+  .slick-dots li button {
+    display: block;
+    box-sizing: border-box;
+    background-clip: border-box;
+    font-size: 0px;
+    //border: 0;
+    outline: none;
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    transform: rotate(45deg);
+    border: 1px solid $color-black;
+    opacity: 0.3;
+    background: $color-orange1;
+    transition: all 0.3s;
+
+    &:hover{
+      opacity: 1;
+      background: $color-red;
+    }
+  }
+
+  .slick-dots li button:hover,
+  .slick-dots li button:focus {
+    outline: none;
+  }
+
+  .slick-dots li.slick-active button {
+    opacity: 1;
+    background: $color-red;
+  }
 }
+
+
+
+
+
+
+
+
