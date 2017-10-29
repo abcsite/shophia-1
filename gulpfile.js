@@ -38,8 +38,8 @@ const gulp = require('gulp'),
 //DEV OR PRODUCTION
 /****************************************************************************************************/
 // let isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV == 'development';
-// const isDevelopment = true;    // DEV
-const isDevelopment = false;    // PRODUCTION
+const isDevelopment = true;    // DEV
+// const isDevelopment = false;    // PRODUCTION
 
 /****************************************************************************************************/
 //PATHS
